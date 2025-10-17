@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tampilan Minimalis (Play Store, Input, & Tombol Search)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            padding: 20px;
+        }
+
+        /* 1. Kotak Atas (Panjang dan kecil) */
+        .box-top {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px 8px 0 0;
+            text-align: center;
+            font-size: 1em;
+            margin-bottom: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 2. Kotak Bawah (Panjang dan sedang) */
+        .box-bottom {
+            background-color: white;
+            padding: 20px;
+            border-radius: 0 0 8px 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            height: 60px;
+        }
+
+        /* Kontainer Ikon Kiri (Play Store) */
+        .icon-wrapper-left {
+            font-size: 2em;
+            color: #333;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-right: 10px; 
+            flex-shrink: 0;
+        }
+
+        .icon-wrapper-left:hover {
+            background-color: #e0e0e0;
+        }
+        
+        /* Tombol Search Kanan (Gabungan Ikon + Teks) */
+        .search-button {
+            display: flex;
+            align-items: center;
+            background-color: #28a745; /* Warna hijau untuk tombol */
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-left: 10px; /* Jarak dari input */
+            transition: background-color 0.3s;
+            font-weight: bold;
+        }
+
+        .search-button:hover {
+            background-color: #1e7e34;
+        }
+
+        .search-button i {
+            margin-right: 5px;
+            font-size: 1.2em; /* Ukuran ikon kaca pembesar */
+        }
+
+        /* Icon Play Store */
+        .playstore-icon {
+            color: #4CAF50;
+            font-size: 2.5em;
+        }
+
+        /* Kolom Input Teks di Tengah */
+        .search-input {
+            flex-grow: 1; 
+            margin: 0 5px;
+            padding: 10px 15px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+            font-size: 1em;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="box-top">
+            <p style="margin: 0;">We're sorry, the requested URL was not found on this server.
+</p>
+        </div>
+
+        <div class="box-bottom">
+            <div class="icon-wrapper-left" onclick="alert('Membuka Play Store...');">
+                <i class="fab fa-google-play playstore-icon"></i>
+            </div>
+            
+            <input type="text" class="search-input" placeholder="Ketik di sini untuk mencari..." />
+
+            <div class="search-button" onclick="alert('Melakukan pencarian untuk: ' + document.querySelector('.search-input').value);">
+                <i class="fas fa-search"></i>
+                Search
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
