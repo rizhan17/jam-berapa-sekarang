@@ -1,2 +1,0 @@
-# jam-berapa-sekarang
-web
